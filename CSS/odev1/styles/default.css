@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --color-primary: #f9cf93;
+  --color-secondary: #557571;
+  --color-gradient: rgba(25, 27, 31, 0.5);
+
+  --base: 16px;
+  --font-family: 'Open Sans', sans-serif;
+  --font-weight: 400;
+}
+
+*,
+::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--base);
+  font-weight: var(--font-weight);
+  font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding: 1.25rem;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.jc-even {
+  justify-content: space-evenly;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.3%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.btn {
+  width: 10rem;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  font-size: 1.25rem;
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.primary {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+.secondary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
