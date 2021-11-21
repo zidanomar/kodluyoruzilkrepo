@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>LinkedIn</title>
+  </head>
+  <body class="bg-light">
+    <!-- HEADER START -->
+    <header>
+      <nav class="container navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            class="text-primary"
+          >
+            <title>LinkedIn</title>
+
+            <g>
+              <path
+                d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z"
+                fill="currentColor"
+              ></path>
+            </g>
+          </svg>
+        </a>
+
+        <form class="form-inline">
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Search" />
+          </div>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="ms-auto navbar-nav d-flex gap-2">
+            <li class="nav-item active">
+              <a class="nav-link d-flex flex-column text-center" href="#">
+                <i class="fas fa-home mb-2"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex flex-column text-center" href="#">
+                <i class="fas fa-user-friends mb-2"></i>
+                <span>Network</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex flex-column text-center" href="#">
+                <i class="fas fa-briefcase mb-2"></i>
+                <span>Jobs</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex flex-column text-center" href="#">
+                <i class="fas fa-comment-dots mb-2"></i>
+                <span>Messaging</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex flex-column text-center" href="#">
+                <i class="fas fa-bell mb-2"></i>
+                <span>Notifications</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- LAYOUT -->
+    <div class="container mt-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-3">
+          <!-- SIDE CARD -->
+          <div class="card mb-3">
+            <div class="card-header"></div>
+            <div class="card-body position-relative">
+              <div class="avatar avatar-card position-absolute">
+                <img
+                  src="https://media-exp1.licdn.com/dms/image/C4E03AQH0T0Tj6KmegA/profile-displayphoto-shrink_100_100/0/1637137419545?e=1642636800&v=beta&t=EFO8RC4b--rtMewT4GvoXqHqJdU4ghwTQFq33lQT0Eo"
+                  alt="avatar"
+                />
+              </div>
+              <div class="pt-4 text-center">
+                <p class="fw-bold">Zidan Omar Hamid</p>
+                <small class="text-grey">Sakarya University</small>
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="card-body">
+              <small class="text-grey">Connections</small>
+              <p class="fw-bold">Grow your network</p>
+            </div>
+          </div>
+          <!-- SIDE CARD END -->
+
+          <!-- STICKY CARD -->
+          <div class="card card-sticky">
+            <div class="card-body">
+              <p class="text-primary fw-bold small">Groups</p>
+              <p class="text-primary fw-bold small">Events</p>
+              <p class="text-primary fw-bold small">Followed Hashtags</p>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="card-body">
+              <p class="text-center text-grey">Discover More</p>
+            </div>
+          </div>
+          <!-- STICKY CARD END -->
+        </div>
+
+        <main class="col-12 col-lg-6">
+          <!-- Post Start -->
+          <div class="card mb-5">
+            <div class="card-body d-flex gap-3">
+              <div class="avatar">
+                <img
+                  src="https://media-exp1.licdn.com/dms/image/C4E03AQH0T0Tj6KmegA/profile-displayphoto-shrink_100_100/0/1637137419545?e=1642636800&v=beta&t=EFO8RC4b--rtMewT4GvoXqHqJdU4ghwTQFq33lQT0Eo"
+                  alt="avatar"
+                />
+              </div>
+              <input
+                class="input-post"
+                type="text"
+                placeholder="Start a post"
+              />
+            </div>
+            <div class="card-body">
+              <div class="post-category d-flex justify-content-between">
+                <div class="col-3 text-center">
+                  <i class="fas fa-images"></i>
+                  <span>Photo</span>
+                </div>
+                <div class="col-3 text-center">
+                  <i class="fas fa-Video"></i>
+                  <span>Video</span>
+                </div>
+                <div class="col-3 text-center">
+                  <i class="fas fa-calendar"></i>
+                  <span>Event</span>
+                </div>
+                <div class="col-3 text-center">
+                  <i class="fas fa-newspaper"></i>
+                  <span>Article</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Post End -->
+
+          <!-- Feeds -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="card-top d-flex align-items-center">
+                <div class="avatar avatar-sqr me-2">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQH0T0Tj6KmegA/profile-displayphoto-shrink_100_100/0/1637137419545?e=1642636800&v=beta&t=EFO8RC4b--rtMewT4GvoXqHqJdU4ghwTQFq33lQT0Eo"
+                    alt="avatar"
+                  />
+                </div>
+                <div>
+                  <p class="fw-bold">Zidan Omar</p>
+                  <small class="d-block">1 followers</small>
+                  <small>1h</small>
+                </div>
+                <div class="align-self-start ms-auto">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1262&q=80"
+                alt="macbook"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-status border-bottom pb-3">
+                <i class="far fa-thumbs-up"></i>
+                <span>10 likes</span>
+              </div>
+            </div>
+            <div class="card-body row text-center">
+              <div class="col-3">
+                <i class="far fa-thumbs-up d-block mb-1"></i>
+                <span> Like</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-comment d-block mb-1"></i>
+                <span> Comment</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-directions d-block mb-1"></i>
+                <span> Share</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-paper-plane d-block mb-1"></i>
+                <span> Send</span>
+              </div>
+            </div>
+          </div>
+          <!-- Feeds End -->
+          <!-- Feeds -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="card-top d-flex align-items-center">
+                <div class="avatar avatar-sqr me-2">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQH0T0Tj6KmegA/profile-displayphoto-shrink_100_100/0/1637137419545?e=1642636800&v=beta&t=EFO8RC4b--rtMewT4GvoXqHqJdU4ghwTQFq33lQT0Eo"
+                    alt="avatar"
+                  />
+                </div>
+                <div>
+                  <p class="fw-bold">Zidan Omar</p>
+                  <small class="d-block">1 followers</small>
+                  <small>1h</small>
+                </div>
+                <div class="align-self-start ms-auto">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1262&q=80"
+                alt="macbook"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-status border-bottom pb-3">
+                <i class="far fa-thumbs-up"></i>
+                <span>10 likes</span>
+              </div>
+            </div>
+            <div class="card-body row text-center">
+              <div class="col-3">
+                <i class="far fa-thumbs-up d-block mb-1"></i>
+                <span> Like</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-comment d-block mb-1"></i>
+                <span> Comment</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-directions d-block mb-1"></i>
+                <span> Share</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-paper-plane d-block mb-1"></i>
+                <span> Send</span>
+              </div>
+            </div>
+          </div>
+          <!-- Feeds End -->
+          <!-- Feeds -->
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="card-top d-flex align-items-center">
+                <div class="avatar avatar-sqr me-2">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQH0T0Tj6KmegA/profile-displayphoto-shrink_100_100/0/1637137419545?e=1642636800&v=beta&t=EFO8RC4b--rtMewT4GvoXqHqJdU4ghwTQFq33lQT0Eo"
+                    alt="avatar"
+                  />
+                </div>
+                <div>
+                  <p class="fw-bold">Zidan Omar</p>
+                  <small class="d-block">1 followers</small>
+                  <small>1h</small>
+                </div>
+                <div class="align-self-start ms-auto">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1262&q=80"
+                alt="macbook"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-status border-bottom pb-3">
+                <i class="far fa-thumbs-up"></i>
+                <span>10 likes</span>
+              </div>
+            </div>
+            <div class="card-body row text-center">
+              <div class="col-3">
+                <i class="far fa-thumbs-up d-block mb-1"></i>
+                <span> Like</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-comment d-block mb-1"></i>
+                <span> Comment</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-directions d-block mb-1"></i>
+                <span> Share</span>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-paper-plane d-block mb-1"></i>
+                <span> Send</span>
+              </div>
+            </div>
+          </div>
+          <!-- Feeds End -->
+        </main>
+
+        <div class="d-none d-lg-block col-4 col-lg-3">
+          <!-- STICKY CARD -->
+          <div class="card card-sticky">
+            <div class="card-body">
+              <!-- Suggested account -->
+              <div class="d-flex mb-3">
+                <div class="avatar avatar me-2">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQH0T0Tj6KmegA/profile-displayphoto-shrink_100_100/0/1637137419545?e=1642636800&v=beta&t=EFO8RC4b--rtMewT4GvoXqHqJdU4ghwTQFq33lQT0Eo"
+                    alt="avatar"
+                  />
+                </div>
+                <div>
+                  <p class="fw-bold">Zidan Omar</p>
+                  <small class="d-block">React Developer</small>
+                  <button type="button" class="btn btn-primary btn-sm">
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <!-- Suggested Account End -->
+              <!-- Suggested account -->
+              <div class="d-flex mb-3">
+                <div class="avatar avatar me-2">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQH0T0Tj6KmegA/profile-displayphoto-shrink_100_100/0/1637137419545?e=1642636800&v=beta&t=EFO8RC4b--rtMewT4GvoXqHqJdU4ghwTQFq33lQT0Eo"
+                    alt="avatar"
+                  />
+                </div>
+                <div>
+                  <p class="fw-bold">Zidan Omar</p>
+                  <small class="d-block">React Developer</small>
+                  <button type="button" class="btn btn-primary btn-sm">
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <!-- Suggested Account End -->
+              <!-- Suggested account -->
+              <div class="d-flex">
+                <div class="avatar avatar me-2">
+                  <img
+                    src="https://media-exp1.licdn.com/dms/image/C4E03AQH0T0Tj6KmegA/profile-displayphoto-shrink_100_100/0/1637137419545?e=1642636800&v=beta&t=EFO8RC4b--rtMewT4GvoXqHqJdU4ghwTQFq33lQT0Eo"
+                    alt="avatar"
+                  />
+                </div>
+                <div>
+                  <p class="fw-bold">Zidan Omar</p>
+                  <small class="d-block">React Developer</small>
+                  <button type="button" class="btn btn-primary btn-sm">
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <!-- Suggested Account End -->
+            </div>
+          </div>
+          <!-- STICKY CARD END -->
+        </div>
+      </div>
+    </div>
+    <!-- LAYOUT END -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
