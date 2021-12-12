@@ -10,7 +10,7 @@ function Router() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='about' element={<FetchOdevi />} />
+        <Route path='/odev1' element={<FetchOdevi />} />
       </Routes>
       <Footer />
     </React.Fragment>
