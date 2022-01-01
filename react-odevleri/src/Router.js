@@ -1,19 +1,20 @@
+import { Box } from '@chakra-ui/react';
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { FetchOdevi, Home } from './pages';
+import { FetchAssignment, Home } from './pages';
 
 function Router() {
   return (
-    <React.Fragment>
+    <Box backgroundColor='gray.50'>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/odev1' element={<FetchOdevi />} />
+        <Route path='/fetchAssignment' element={<FetchAssignment />} />
       </Routes>
       <Footer />
-    </React.Fragment>
+    </Box>
   );
 }
 

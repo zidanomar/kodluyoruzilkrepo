@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, HStack, Link } from '@chakra-ui/react';
-import { Link as ReachLink } from 'react-router-dom';
+import { Container, Heading, HStack } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -11,18 +11,11 @@ function Header() {
         alignItems='center'
         justifyContent='space-between'
       >
-        <div>Home</div>
-        <HStack spacing={10}>
-          <ReachLink to='/'>
-            <Link>Home</Link>
-          </ReachLink>
-          <ReachLink to='/1'>
-            <Link>Odev 1</Link>
-          </ReachLink>
-          <ReachLink to='/2'>
-            <Link>Odev 2</Link>
-          </ReachLink>
-        </HStack>
+        <Link to='/'>
+          <Heading as='h3' size='md' color='teal.300'>
+            Home
+          </Heading>
+        </Link>
       </Container>
     </HStack>
   );
