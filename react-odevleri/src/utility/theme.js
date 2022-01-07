@@ -1,5 +1,19 @@
 import { extendTheme } from '@chakra-ui/react';
 
-const theme = extendTheme({});
+export const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        color: 'teal.400',
+      },
+      a: {
+        color: 'teal.500',
+        _hover: {
+          textDecoration: 'none',
+        },
+      },
+    },
+  },
+});
 
 export default theme;

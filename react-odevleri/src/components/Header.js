@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <HStack py='5' boxShadow='sm' bg='white'>
+    <HStack py='5' backgroundColor='white' boxShadow='sm'>
       <Container
         display='flex'
         maxW={'container.xl'}
@@ -12,7 +12,7 @@ function Header() {
         justifyContent='space-between'
       >
         <Link to='/'>
-          <Heading as='h3' size='md' color='teal.300'>
+          <Heading as='h3' size='md'>
             Home
           </Heading>
         </Link>

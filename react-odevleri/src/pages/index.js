@@ -1,3 +1,5 @@
 import Home from './Home/Home';
 import FetchAssignment from './Assignments/FetchAssignment';
-export { Home, FetchAssignment };
+import TodoList from './Assignments/TodoList';
+
+export { Home, FetchAssignment, TodoList };

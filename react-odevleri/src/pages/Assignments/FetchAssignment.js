@@ -5,18 +5,17 @@ import React, { useEffect, useState } from 'react';
 function FetchAssignment() {
   const [fetchedData, setFetchedData] = useState(null);
 
-  const fetchData = async () => {
-    const { data: user } = await axios.get(
-      'https://jsonplaceholder.typicode.com/users/1'
-    );
-    const { data: posts } = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts?userId=1'
-    );
-
-    setFetchedData({ ...user, posts });
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      const { data: user } = await axios.get(
+        'https://jsonplaceholder.typicode.com/users/1'
+      );
+      const { data: posts } = await axios.get(
+        'https://jsonplaceholder.typicode.com/posts?userId=1'
+      );
+      console.log({ ...user, posts });
+      setFetchedData({ ...user, posts });
+    };
     fetchData();
   }, []);
 
@@ -24,8 +23,8 @@ function FetchAssignment() {
     <Container maxW='container.xl' minH='100vh' py='10'>
       {fetchedData ? (
         <Box maxW='xs' padding={6} backgroundColor='white'>
-          <Text>{fetchedData.name}</Text>
-          <Text>{`Total Post: ${fetchedData.posts.length}`}</Text>
+          <Text color='teal.400'>{fetchedData.name}</Text>
+          <Text color='teal.400'>{`Total Post: ${fetchedData.posts.length}`}</Text>
         </Box>
       ) : (
         <Text>Loading...</Text>
