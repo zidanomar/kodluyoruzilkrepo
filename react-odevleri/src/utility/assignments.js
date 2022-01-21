@@ -15,4 +15,12 @@ export const assignments = [
     imageUrl: 'https://picsum.photos/501',
     path: '/todolist',
   },
+  {
+    id: 3,
+    title: 'Weather App',
+    description: 'Working with openweather API',
+    level: 4,
+    imageUrl: 'https://picsum.photos/502',
+    path: '/weather',
+  },
 ];

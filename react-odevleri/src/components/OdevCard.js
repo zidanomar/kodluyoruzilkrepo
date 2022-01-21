@@ -55,13 +55,13 @@ function OdevCard({ assignment }) {
             {title}
           </Box>
 
-          <Box mt='2' isTruncated>
+          <Box mt='4' isTruncated>
             <Box as='span' color='gray.600' fontSize='sm'>
               {difficulty}
             </Box>
           </Box>
 
-          <Box display='flex' mt='' alignItems='center'>
+          <Box display='flex' mt='2' alignItems='center'>
             {Array(5)
               .fill('')
               .map((_, i) => (

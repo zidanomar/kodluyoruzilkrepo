@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 
 function FetchAssignment() {
   const [fetchedData, setFetchedData] = useState(null);
-
   useEffect(() => {
     const fetchData = async () => {
       const { data: user } = await axios.get(
@@ -13,7 +12,6 @@ function FetchAssignment() {
       const { data: posts } = await axios.get(
         'https://jsonplaceholder.typicode.com/posts?userId=1'
       );
-      console.log({ ...user, posts });
       setFetchedData({ ...user, posts });
     };
     fetchData();
