@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: atm-bank
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/atmbank}
+    username: ${DB_USERNAME:atm}
+    password: ${DB_PASSWORD:atm}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    open-in-view: false
+server:
+  port: ${SERVER_PORT:8080}
+  error:
+    include-message: always
+
+app:
+  security:
+    jwt:
+      secret: ${JWT_SECRET:ZmFrZS1sb2NhbC1kZXYtc2VjcmV0LWNoYW5nZS1tZS1wbGVhc2UtMzItY2hhcnM=}
+      expiration-minutes: ${JWT_EXP_MIN:60}
+    max-login-attempts: 3
+  storage:
+    users-file: ${USERS_FILE:./data/users.csv}
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:4173}
+
+logging:
+  level:
+    root: INFO
+    com.atm.bank: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs

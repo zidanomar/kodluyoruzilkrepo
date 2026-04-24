@@ -1,0 +1,80 @@
+// ATM Bank — database schema for https://dbdiagram.io
+Project atm_bank {
+  database_type: 'PostgreSQL'
+  Note: 'ATM Bank EER diagram. Admin (1) - Customer (N), Customer (1) - Account (1), Account (1) - Transaction (N).'
+}
+
+Enum role {
+  ADMIN
+  CUSTOMER
+}
+
+Enum transaction_type {
+  DEPOSIT
+  WITHDRAW
+  TRANSFER_OUT
+  TRANSFER_IN
+}
+
+Enum transaction_status {
+  SUCCESS
+  FAILED
+}
+
+Table users {
+  id               bigserial    [pk, increment]
+  username         varchar(64)  [not null, unique]
+  email            varchar(128) [not null, unique]
+  full_name        varchar(128) [not null]
+  password_hash    varchar(255) [not null, note: 'Stored masked (BCrypt hash)']
+  role             role         [not null]
+  failed_attempts  int          [not null, default: 0]
+  locked           boolean      [not null, default: false]
+  admin_id         bigint       [ref: > users.id, note: 'ManyToOne self-reference: customer belongs to admin']
+  created_at       timestamp    [not null, default: `now()`]
+  updated_at       timestamp    [not null, default: `now()`]
+
+  Indexes {
+    admin_id
+  }
+}
+
+Table accounts {
+  id              bigserial     [pk, increment]
+  account_number  varchar(32)   [not null, unique]
+  balance         decimal(19,2) [not null, default: 0, note: 'balance >= 0']
+  owner_id        bigint        [not null, unique, ref: - users.id]
+  created_at      timestamp     [not null, default: `now()`]
+  updated_at      timestamp     [not null, default: `now()`]
+}
+
+Table transactions {
+  id                       bigserial          [pk, increment]
+  account_id               bigint             [not null, ref: > accounts.id]
+  counterparty_account_id  bigint             [ref: > accounts.id, note: 'null for deposit/withdraw']
+  type                     transaction_type   [not null]
+  status                   transaction_status [not null]
+  amount                   decimal(19,2)      [not null]
+  balance_after            decimal(19,2)      [not null]
+  description              varchar(255)
+  created_at               timestamp          [not null, default: `now()`]
+  updated_at               timestamp          [not null, default: `now()`]
+
+  Indexes {
+    account_id
+    created_at
+  }
+}
+
+Table login_audit {
+  id            bigserial   [pk, increment]
+  user_id       bigint      [not null, ref: > users.id]
+  success       boolean     [not null]
+  logged_in_at  timestamp   [not null]
+  ip_address    varchar(64)
+
+  Indexes {
+    user_id
+    logged_in_at
+  }
+}
